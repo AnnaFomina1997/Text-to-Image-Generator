@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:80"
+    volumes:
+      - ./backend/app/generated_images:/app/generated_images
+  ml_service:
+    build: ./ml_service
+    ports:
+      - "8001:80"
+    volumes:
+      - ./backend/app/generated_images:/app/generated_images
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    environment:
+    - CUDA_VISIBLE_DEVICES=0
+#    - TORCH_CUDA_ALLOC_CONF=max_split_size_mb:128  # Ограничение размера выделяемых блоков памяти

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text to Image Generator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Text to Image Generator</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="textForm">
+                    <div class="form-group">
+                        <label for="inputText">Enter Text</label>
+                        <input type="text" class="form-control" id="inputText" placeholder="Enter text here">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Generate</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div id="loading" class="spinner-border text-primary" role="status" style="display:none;">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <img id="generatedImage" src="#" alt="Generated Image" class="img-fluid" style="display:none;">
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

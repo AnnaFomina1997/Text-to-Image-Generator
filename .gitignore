@@ -1,0 +1,8 @@
+.venv
+.idea
+Backend/app/__pycache__
+Backend/tests/.pytest_cache
+Backend/tests/__pycache__
+ml_service/app/__pycache__
+ml_service/tests/.pytest_cache
+ml_service/tests/__pycache__
