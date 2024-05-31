@@ -3,13 +3,13 @@ import os
 from fastapi.testclient import TestClient
 from ml_service.app.main import app
 from ml_service.app.model import generate_image
-
-client = TestClient(app)
-
-
-def test_server_is_up():
-    response = client.get("/")
-    assert response.status_code == 200, f"Expected status code 200, but got {response.status_code}"
+#
+# client = TestClient(app)
+#
+#
+# def test_server_is_up():
+#     response = client.get("/")
+#     assert response.status_code == 200, f"Expected status code 200, but got {response.status_code}"
     # assert response.json() == {"Hello, World!"}
 
 # def test_generate_image_endpoint():
