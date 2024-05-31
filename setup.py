@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="Text to Image Generator",
+    name="Text to Image GeneratorAnnaMaria",
     version="0.0.1",
-    description="A project that combines a Flask backend with an ML service to generate images from text.",
+    description="A project that combines a FastApi backend with an ML service to generate images from text.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     author="Anna Fomina Melnikova Maria",
