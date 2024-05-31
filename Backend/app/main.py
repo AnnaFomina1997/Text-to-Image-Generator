@@ -22,7 +22,7 @@ template_dir = ""
 
 if platform == "linux" or platform == "linux2":
     static_dir = "Backend/app/static"
-    generated_images_dir = "Backend/app/generated_images"
+    generated_images_dir = "app/generated_images"
     template_dir = "Backend/app/templates"
 elif platform == "win32":
     static_dir = "Backend/app/static"
