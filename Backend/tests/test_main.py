@@ -13,7 +13,6 @@ def test_read_root():
 
 def test_static_files():
     response = client.get("/static/css/style.css")
-    assert response.status_code == 200 or response.status_code == 404
-
+    assert response.status_code == 200
     response = client.get("/static/js/script.js")
-    assert response.status_code == 200 or response.status_code == 404
+    assert response.status_code == 200
