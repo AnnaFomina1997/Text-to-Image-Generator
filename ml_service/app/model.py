@@ -27,8 +27,9 @@ os.makedirs("generated_images", exist_ok=True)
 # Загрузка модели
 model_id = "runwayml/stable-diffusion-v1-5"
 device = "cuda" if torch.cuda.is_available() else "cpu"
+if device == 'cuda':
+    free_gpu_cache()
 
-free_gpu_cache()
 pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
 pipe.to(device)
 
