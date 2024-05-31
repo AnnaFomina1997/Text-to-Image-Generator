@@ -30,7 +30,7 @@ elif platform == "win32":
     template_dir = "Backend/app/templates"
 
 app.mount("/static", StaticFiles(directory=static_dir), name="static")
-app.mount("/generated_images", StaticFiles(directory=generated_images_dir), name="generated_images")
+# app.mount("/generated_images", StaticFiles(directory=generated_images_dir), name="generated_images")
 
 templates = Jinja2Templates(directory=template_dir)
 
