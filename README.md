@@ -1,7 +1,7 @@
 
 # Text to Image Generator
 
-The project aims to create images from text using a pre-trained deep learning model.
+The project aims to create images from text using a pre-trained ML learning model.
 
 This project contains two main components:
 1. A FastAPI backend serving HTML, CSS, and JavaScript.
@@ -12,7 +12,7 @@ This project contains two main components:
 ### Fastapi Backend
 The FastApi backend serves the frontend application, which includes HTML, CSS, and JavaScript files. It provides the user interface where users can input their text and view the generated image.
 
-### Deep Learning Service
+### ML Learning Service
 The ML learning service utilizes the stabilityai/sdxl-turbo model. This service accepts text as input, processes them using the model, and returns image.
 
 
