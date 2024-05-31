@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="Text to Image GeneratorAnnaMaria",
+    name="Text-to-Image-Generator",
     version="0.0.1",
     description="A project that combines a FastApi backend with an ML service to generate images from text.",
     long_description=open("README.md").read(),
