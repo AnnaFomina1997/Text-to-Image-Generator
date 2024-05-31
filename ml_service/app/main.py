@@ -1,8 +1,12 @@
-from fastapi import FastAPI, Response
-from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+
 from .model import generate_image  # Ensure your model module is correctly imported
+
+from fastapi import FastAPI, Request, Response
+from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
+
+from starlette.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
@@ -22,6 +26,11 @@ app.mount("/generated_images", StaticFiles(directory="generated_images"), name="
 
 class InputText(BaseModel):
     text: str
+
+
+@app.get("/", response_class=HTMLResponse)
+async def read_root(request: Request):
+    return {"request": request}
 
 
 @app.post("/generate-image/")
