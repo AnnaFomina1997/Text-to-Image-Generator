@@ -10,10 +10,10 @@ This project contains two main components:
 ## Project Structure
 
 ### Fastapi Backend
-The Flask backend serves the frontend application, which includes HTML, CSS, and JavaScript files. It provides the user interface where users can input their question and document, and view the generated answer.
+The FastApi backend serves the frontend application, which includes HTML, CSS, and JavaScript files. It provides the user interface where users can input their text and view the generated image.
 
 ### Deep Learning Service
-The deep learning service utilizes the stabilityai/sdxl-turbo model. This service accepts a question and a document as input, processes them using the model, and returns an answer based on the content of the document.
+The ML learning service utilizes the stabilityai/sdxl-turbo model. This service accepts text as input, processes them using the model, and returns image.
 
 
 ### Backend
@@ -21,6 +21,12 @@ The FastApi backend will be accessible at http://localhost:8000. It serves the f
 
 
 ## Features
+FastApi Backend: Serves the frontend and handles user interactions.
+ML Service: Uses a state-of-the-art language model to provide answers based on the provided text.
+Docker Support: Both components can be easily deployed using Docker and Docker Compose.
+CORS Handling: Ensures smooth interaction between the backend and the ML service.
+
+
 ### FastApi Backend: 
 Serves the frontend and handles user interactions.
 ### ML Service: 
