@@ -4,11 +4,8 @@ from fastapi.testclient import TestClient
 from ml_service.app.main import app
 from ml_service.app.model import generate_image
 
-# client = TestClient(app)
-@pytest.fixture
-def client():
-    with app.test_client() as client:
-        yield client
+client = TestClient(app)
+
 # def test_generate_image_endpoint():
 #     response = client.post("/generate-image/", json={"text": "space pig"})
 #     assert response.status_code == 200
